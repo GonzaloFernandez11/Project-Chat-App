@@ -7,5 +7,3 @@ const Chat = () => {
 }
 
 export default Chat
-
-// 31:39 
