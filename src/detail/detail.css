@@ -43,6 +43,7 @@
             }
 
             .photos {
+                margin-top: 20px;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
@@ -71,7 +72,29 @@
                         }
                     }
 
+                    .icon {
+                        width: 30px;
+                        height: 30px;
+                        background-color: rgba(17, 25, 40, 0.3);
+                        padding: 10px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
                 }
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: rgba(230, 74, 105, 0.553);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+            transition: ease 0.3s;
+            background-color: rgba(216, 19, 58, 0.829);
             }
         }
     }

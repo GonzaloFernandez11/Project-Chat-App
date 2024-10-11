@@ -32,42 +32,42 @@ const Detail = () => {
                             <img src="https://media.traveler.es/photos/613767f5b57001fc862c7e46/master/w_1600%2Cc_limit/164007.jpg" alt="" />
                             <span>photo_2024_2.png</span>
                             </div>
-                            <img src="./download.png" alt="" />
+                            <img src="./download.png" alt="" className="icon"/>
                         </div>
                         <div className="photoItem">
                             <div className="photoDetail">
                             <img src="https://media.traveler.es/photos/613767f5b57001fc862c7e46/master/w_1600%2Cc_limit/164007.jpg" alt="" />
                             <span>photo_2024_2.png</span>
                             </div>
-                            <img src="./download.png" alt="" />
+                            <img src="./download.png" alt="" className="icon"/>
                         </div>
                         <div className="photoItem">
                             <div className="photoDetail">
                             <img src="https://media.traveler.es/photos/613767f5b57001fc862c7e46/master/w_1600%2Cc_limit/164007.jpg" alt="" />
                             <span>photo_2024_2.png</span>
                             </div>
-                            <img src="./download.png" alt="" />
+                            <img src="./download.png" alt="" className="icon"/>
                         </div>
                         <div className="photoItem">
                             <div className="photoDetail">
                             <img src="https://media.traveler.es/photos/613767f5b57001fc862c7e46/master/w_1600%2Cc_limit/164007.jpg" alt="" />
                             <span>photo_2024_2.png</span>
                             </div>
-                            <img src="./download.png" alt="" />
+                            <img src="./download.png" alt="" className="icon"/>
                         </div>
                         <div className="photoItem">
                             <div className="photoDetail">
                             <img src="https://media.traveler.es/photos/613767f5b57001fc862c7e46/master/w_1600%2Cc_limit/164007.jpg" alt="" />
                             <span>photo_2024_2.png</span>
                             </div>
-                            <img src="./download.png" alt="" />
+                            <img src="./download.png" alt="" className="icon"/>
                         </div>
                         <div className="photoItem">
                             <div className="photoDetail">
                             <img src="https://media.traveler.es/photos/613767f5b57001fc862c7e46/master/w_1600%2Cc_limit/164007.jpg" alt="" />
                             <span>photo_2024_2.png</span>
                             </div>
-                            <img src="./download.png" alt="" />
+                            <img src="./download.png" alt="" className="icon"/>
                         </div>
                     </div>
                 </div>
