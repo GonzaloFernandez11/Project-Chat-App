@@ -61,6 +61,11 @@
                     background-color: #1f69f1;
                     box-shadow: 0 6px 12px rgba(31, 175, 241, 0.788);
                 }
+
+                &:disabled {
+                    cursor: not-allowed;
+                    background-color: #1f8ff1a8;
+                }
             }
         }
     }
