@@ -3,6 +3,8 @@
         border-left: 1px solid #dddddd35;
         border-right: 1px solid #dddddd35;
         height: 100%;
+        display: flex;
+        flex-direction: column;
 
         .top {
             padding: 20px;
@@ -29,7 +31,7 @@
                     gap: 5px;
 
                     span {
-                        font-size: 18px;
+                        font-size: 16px;
                         font-weight: bold;
                     }
 
@@ -51,7 +53,56 @@
             }
         }
 
-        /* .center {} */
+        .center {
+            padding: 20px;
+            flex: 1;
+            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .message {
+                max-width: 70%;
+                display: flex;
+                gap: 20px;
+
+                &.own {
+                    align-self: flex-end;
+
+                    .texts {
+                        p {
+                            background-color: rgb(44, 44, 253);
+                        }
+                    }
+                }
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .texts {
+                    flex: 1;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    p {
+                        padding: 20px;
+                        background-color: rgba(17, 25, 40, 0.3);
+                        border-radius: 10px;
+                    }
+
+                    span {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
 
         .bottom {
             padding: 20px;
@@ -59,6 +110,7 @@
             align-items: center;
             justify-content: space-between;
             border-top: 1px solid #dddddd35;
+            margin-top: auto;
 
             .icons {
                 display: flex;
@@ -82,6 +134,22 @@
                 font-size: 16px;
             }
 
+            .emoji {
+                position: relative;
+
+                img {
+                    cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .picker {
+                    position: absolute;
+                    bottom: 50px;
+                    left: 0;
+                }
+            }
+
             .sendButton {
                 background-color: #5183fe;
                 color: white;
@@ -91,4 +159,18 @@
                 font-size: 16px;
             }
         }
+}
+
+.center::-webkit-scrollbar {
+    width: 5px; 
+}
+
+.center::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 5px; 
+}
+
+.center::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 25px;
 }
