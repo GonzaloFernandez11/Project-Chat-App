@@ -1,6 +1,6 @@
-import Chat from './components/chat/Chat'
-import List from './components/lists/List'
-import Detail from './components/detail/Detail'
+import Chat from './components/chat/Chat';
+import List from './components/lists/List';
+import Detail from './components/detail/Detail';
 import Login from './components/login/Login';
 
 const App = ()  => {
