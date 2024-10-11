@@ -67,6 +67,13 @@ const Chat = () => {
                         <span>1 min ago</span>
                     </div>
                 </div>
+                <div className="message own">
+                    <div className="texts">
+                        <img src="https://media.traveler.es/photos/613767f5b57001fc862c7e46/master/w_1600%2Cc_limit/164007.jpg" alt="" />
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate numquam ut debitis natus, voluptatibus ipsum.</p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
             </div>
             <div className="bottom">
                 <div className="icons">
