@@ -1,13 +1,20 @@
-import Chat from './chat/Chat'
-import List from './list/List'
-import Detail from './detail/Detail'
+import Chat from './components/chat/Chat'
+import List from './components/lists/List'
+import Detail from './components/detail/Detail'
+import Login from './components/login/Login';
 
 const App = ()  => {
+const user = false;
+
   return (
     <div className="container">
-      <List/>
-      <Chat/> 
-      <Detail/>
+      {user ? (
+        <>
+        <List/>
+        <Chat/> 
+        <Detail/>
+        </>
+      ) : (<Login />)}
     </div>
   )
 }
