@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import './chatList.css'
-import AddUser from './addUser/Adduser';
 import { useUserStore } from '../../../lib/userStore';
 import { doc, getDoc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
+import AddUser from './addUser/AddUser';
+
 
 const ChatList = () => {
     const [addMode, setAddMode] = useState(false);
@@ -44,9 +45,9 @@ const ChatList = () => {
             </div>
             {chats.map((chat) => (
             <div className="item" key={chat.chatId}>
-                <img src="/avatar.png" alt="" />
+                <img src={ chat.user.avatar || "/avatar.png" } alt="" />
                 <div className="texts">
-                    <span>Ricky Fort</span>
+                    <span>{chat.user.username}</span>
                     <p>{chat.lastMessage}</p>
                 </div>
             </div>
