@@ -11,7 +11,7 @@ const Chat = () => {
     const [open, setOpen] = useState(false);
     const [text, setText] = useState("");
     const [chat, setChat] = useState("");
-    const { chatId, user } = useChatStore();
+    const { chatId, user, isCurrentUserBlocked, isReceiverBlocked } = useChatStore();
     const { currentUser } = useUserStore();
     const [img, setImg] = useState({
         file: null,
@@ -108,9 +108,9 @@ const Chat = () => {
         <div className="chat">
             <div className="top">
                 <div className="user">
-                    <img src="./avatar.png" alt="" />
+                    <img src={ user?.avatar || "./avatar.png" } alt="" />
                     <div className="texts">
-                        <span>Ricky Fort</span>
+                        <span>{ user?.username }</span>
                         <p>Lorem ipsum dolor, sit amet.</p>
                     </div>
                 </div>
@@ -151,18 +151,18 @@ const Chat = () => {
                     <label htmlFor='file'>
                     <img src="./img.png" alt="" />
                     </label>
-                    <input type="file" id='file' style={{display: 'none'}} onChange={handleImg}/>
+                    <input type="file" id='file' style={{display: 'none'}} onChange={handleImg} />
                     <img src="./camera.png" alt="" />
                     <img src="./mic.png" alt="" />
                 </div>
-                <input type="text" placeholder='Type a message...' value={text} onChange={(e) => setText(e.target.value)}/>
+                <input type="text" placeholder={(isCurrentUserBlocked || isReceiverBlocked) ? 'You cannot send a message' : 'Type a message...'} disabled={isCurrentUserBlocked || isReceiverBlocked} value={text} onChange={(e) => setText(e.target.value)}/>
                 <div className="emoji">
                     <img src="./emoji.png" alt="" onClick={() => setOpen((prev) => !prev)} />
                    <div className="picker">
                     <EmojiPicker open={open} onEmojiClick={handleEmoji}/>
                    </div>
                 </div>
-                <button className='sendButton' onClick={handleSend}>Send</button>
+                <button className='sendButton' onClick={handleSend} disabled={isCurrentUserBlocked || isReceiverBlocked} >Send</button>
             </div>
         </div>
     )
