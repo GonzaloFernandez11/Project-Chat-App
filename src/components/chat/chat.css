@@ -64,7 +64,8 @@
             gap: 20px;
 
             .message {
-                max-width: 70%;
+                max-width: 50%;
+                align-self: baseline;
                 display: flex;
                 gap: 20px;
 
