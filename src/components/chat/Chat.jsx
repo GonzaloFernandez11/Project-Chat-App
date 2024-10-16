@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './chat.css';
 import EmojiPicker from 'emoji-picker-react';
-import { arrayUnion, doc, onSnapshot, updateDoc } from 'firebase/firestore';
+import { arrayUnion, doc, getDoc, onSnapshot, updateDoc } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
 import { useChatStore } from '../../lib/chatStore';
 import { useUserStore } from '../../lib/userStore';
@@ -62,15 +62,17 @@ const Chat = () => {
                 
                 const chatIndex = userChatsData.chats.findIndex(c => c.chatId === chatId)
                 
-                userChatsData[chatIndex].lastMessage = text;
-                userChatsData[chatIndex].isSeen = id === currentUser.id ? true : false;
-                userChatsData[chatIndex].updatedAt = Date.now();
+                userChatsData.chats[chatIndex].lastMessage = text;
+                userChatsData.chats[chatIndex].isSeen = id === currentUser.id ? true : false;
+                userChatsData.chats[chatIndex].updatedAt = Date.now();
                 
                 await updateDoc(userChatsRef, {
                     chats: userChatsData.chats,
                 })
             }
         });
+
+        setText("");
 
         } catch (error) {
             console.log(error);
